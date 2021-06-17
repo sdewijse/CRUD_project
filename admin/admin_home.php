@@ -26,7 +26,7 @@
     Add company<br>
 </div>
 <div class="form-popup" id="myForm">
-    <form action="admin_home.php?action=company_insert" class="form-container" method="post">
+    <form action="admin_php/add_company.php" class="form-container" method="post">
         <h1>Add company</h1><br>
 
         <label for="companyName"><b>Company name</b></label>
@@ -107,14 +107,6 @@
         </script>
     </div>
 
-<?php
-
-if (isset($_GET["action"])) {
-    if ($_GET['action'] == 'company_insert') {
-        include "admin_php/add_company.php";
-    }}
-
-?>
 </div>
 </body>
 </html>

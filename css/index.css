@@ -13,3 +13,9 @@
 body {
     background-color: #00b0f0;
 }
+
+.loginContent{
+    height: 400px;
+    width: 400px;
+    margin: auto;
+}
