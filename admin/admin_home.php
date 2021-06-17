@@ -5,11 +5,13 @@
     <title>Internship Japan</title>
     <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/popup_form.css">
 </head>
 
-<?php include_once("../includes/connect.php");?>
+<?php
+include_once("../includes/session.php");
+include_once("../includes/connect.php");?>
 
 <body>
 
@@ -17,7 +19,7 @@
     <nav>
         <a href="admin_home.php">Home</a>
         <a href="admin_edu_partners.php">Educational partners</a>
-        <a href="admin_users.php">Users</a>
+        <a href="admin_profile.php">Users</a>
     </nav>
 </header>
 
@@ -54,7 +56,7 @@
 </script>
 
 <div id="Companies" class="tabcontent">
-    <table class="tableSearch">
+    <table class="companyTable">
         <tr>
             <td class="searchBar"><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Look a company up."></td>
         </tr>
@@ -88,7 +90,7 @@
                 var input, filter, table, tr, td, i, txtValue;
                 input = document.getElementById("myInput");
                 filter = input.value.toUpperCase();
-                table = document.getElementById("myTable");
+                table = document.getElementById("companyTable");
                 tr = table.getElementsByTagName("tr");
 
                 // Loop through all table rows, and hide those who don't match the search query

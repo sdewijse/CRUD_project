@@ -18,7 +18,7 @@ $stmt_cpAdd->execute();
 
 if($stmt_cpAdd->rowCount() > 0) {
 
-    echo "<span><a href=../admin_home.php>Company added</a></span>";
+//    echo "<span><a href=../admin_home.php>Company added</a></span>";
     header("Location: ../admin_home.php");
 
 

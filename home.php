@@ -34,7 +34,7 @@ switch ($message) {
     <meta charset="utf-8">
     <title>Internship Japan</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/layout.css">
 </head>
 
 <?php include_once("includes/connect.php");?>
@@ -57,8 +57,8 @@ switch ($message) {
         </tr>
     </table>
 
-    <div id="Companies" class="tabcontent">
-    <table id="myTable">
+    <div id="Companies">
+    <table id="companyTable">
         <tr class="header">
             <th style="width:40%;">Name</th>
             <th style="width:25%;">Email</th>
@@ -72,8 +72,8 @@ switch ($message) {
                     echo '
                 
                 <tr>
-                    <td><a href=pages/company_detail.php?id=' . $result_company["id"] . '>' . $result_company["company_name"] . '</a></td>
-                    <td><a href=pages/company_detail.php?id=' . $result_company["id"] . '>' . $result_company["company_mail"] . '</a></td>
+                    <td><a class="page_link" href=pages/company_detail.php?id=' . $result_company["id"] . '>' . $result_company["company_name"] . '</a></td>
+                    <td><a class="page_link" href=pages/company_detail.php?id=' . $result_company["id"] . '>' . $result_company["company_mail"] . '</a></td>
                 </tr>';
                 }
             }
@@ -85,7 +85,7 @@ switch ($message) {
             var input, filter, table, tr, td, i, txtValue;
             input = document.getElementById("myInput");
             filter = input.value.toUpperCase();
-            table = document.getElementById("myTable");
+            table = document.getElementById("companyTable");
             tr = table.getElementsByTagName("tr");
 
             // Loop through all table rows, and hide those who don't match the search query

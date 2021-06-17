@@ -19,9 +19,9 @@ $partner_id = $_REQUEST["id"];
 <body>
 <header>
     <nav>
-        <a href="../home.php">Home</a>
-        <a href="educational_partners.php">Educational partners</a>
-        <a href="profile.php">Profile</a>
+        <a href="admin_home.php">Home</a>
+        <a href="admin_edu_partners.php">Educational partners</a>
+        <a href="admin_profile.php">Profile</a>
     </nav>
 </header>
 <div>

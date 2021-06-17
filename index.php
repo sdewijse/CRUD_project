@@ -36,7 +36,7 @@ switch ($message) {
     <title>Internship Japan</title>
     <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
@@ -44,11 +44,11 @@ switch ($message) {
 <div class="loginContent">
     <form class="inloggen" action="php/login/login_connect.php" method="post">
         <div class="loginInhoud">
-            <p class="inlogTitel">Inloggen</p><br>
-            <label>Username</label>
-            <input required type="text" name="username" id="username" placeholder="username"/>
-            <label>Password</label>
-            <input required type="password" name="password" id="password" placeholder="password"/>
+            <p class="inlogTitel">Log in</p><br>
+            <label>Username</label><br>
+            <input required type="text" name="username" id="username" placeholder="username"/><br>
+            <label>Password</label><br>
+            <input required type="password" name="password" id="password" placeholder="password"/><br>
         </div>
         <div class="button">
             <input type="submit" name="submit" value="Sign in" id="sign in">

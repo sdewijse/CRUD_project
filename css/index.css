@@ -15,7 +15,11 @@ body {
 }
 
 .loginContent{
-    height: 400px;
-    width: 400px;
-    margin: auto;
+    margin-top: 200px;
+    height: auto;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #0070c0;
+    text-align: center;
 }

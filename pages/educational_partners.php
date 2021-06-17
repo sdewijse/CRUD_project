@@ -5,20 +5,28 @@
     <title>Internship Japan</title>
     <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/layout.css">
 </head>
 
-<?php include_once("includes/connect.php");?>
+<?php include_once("../includes/session.php");?>
+<?php include_once("../includes/connect.php");?>
 
 <body>
+<header>
+    <nav>
+        <a href="../home.php">Home</a>
+        <a href="educational_partners.php">Educational partners</a>
+        <a href="profile.php">Profile</a>
+    </nav>
+</header>
 <div id="Companies">
     <table class="tableSearch">
         <tr>
-            <td class="searchBar"><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Zoek een bedrijfsnaam."></td>
+            <td class="searchBar"><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Type in the name of one of our partners."></td>
         </tr>
     </table>
 
-    <div id="Companies" class="tabcontent">
+    <div id="Edu_partners">
         <table id="myTable">
             <tr class="header">
                 <th style="width:40%;">Name</th>
@@ -29,12 +37,12 @@
             $stmt_edu = $connection->prepare("SELECT * FROM educational_partners ORDER BY name");
             $stmt_edu->execute();
             if($stmt_edu->rowCount() > 0) {
-                while ($result_edu = $stmt_company->fetch(PDO::FETCH_ASSOC)) {
+                while ($result_edu = $stmt_edu->fetch(PDO::FETCH_ASSOC)) {
                     echo '
                 
                 <tr>
-                    <td><a href=pages/company_detail.php?id=' . $result_edu["id"] . '>' . $result_edu["name"] . '</a></td>
-                    <td><a href=pages/company_detail.php?id=' . $result_edu["id"] . '>' . $result_edu["branch"] . '</a></td>
+                    <td><a class="page_link" href=edu_partner_detail.php?id=' . $result_edu["id"] . '>' . $result_edu["name"] . '</a></td>
+                    <td><a class="page_link" href=edu_partner_detail.php?id=' . $result_edu["id"] . '>' . $result_edu["branch"] . '</a></td>
                 </tr>';
                 }
             }

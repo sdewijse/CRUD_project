@@ -5,18 +5,25 @@
     <title>Internship Japan</title>
     <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/layout.css">
 </head>
 
 <?php
-    include_once("includes/session.php");
-    include_once("includes/connect.php");
+    include_once("../includes/session.php");
+    include_once("../includes/connect.php");
 
-    $company_id = $_POST["id"];
+    $company_id = $_REQUEST["id"];
 ?>
 
 
 <body>
+<header>
+    <nav>
+        <a href="../home.php">Home</a>
+        <a href="educational_partners.php">Educational partners</a>
+        <a href="profile.php">Profile</a>
+    </nav>
+</header>
     <div>
         <div class="customer_info">
             <?php
