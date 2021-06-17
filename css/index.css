@@ -1,0 +1,15 @@
+.error_message {
+    background-color: red;
+    text-align: center;
+}
+
+.success_message {
+    background-color: green;
+    text-align: center;
+}
+
+/*Color palette hexcodes: #00b0f0  #0070c0  #ff0000  #171616 */
+
+body {
+    background-color: #00b0f0;
+}
