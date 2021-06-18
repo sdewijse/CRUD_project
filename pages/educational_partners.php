@@ -27,7 +27,7 @@
     </table>
 
     <div id="Edu_partners">
-        <table id="myTable">
+        <table id="eduTable">
             <tr class="header">
                 <th style="width:40%;">Name</th>
                 <th style="width:25%;">address</th>
@@ -54,7 +54,7 @@
                 var input, filter, table, tr, td, i, txtValue;
                 input = document.getElementById("myInput");
                 filter = input.value.toUpperCase();
-                table = document.getElementById("myTable");
+                table = document.getElementById("eduTable");
                 tr = table.getElementsByTagName("tr");
 
                 // Loop through all table rows, and hide those who don't match the search query

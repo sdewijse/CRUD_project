@@ -6,13 +6,14 @@
     <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/popup_form.css">
 </head>
 
 <?php
-include_once("includes/session.php");
-include_once("includes/connect.php");
+include_once("../includes/session.php");
+include_once("../includes/connect.php");
 
-$company_id = $_POST["id"];
+$company_id = $_REQUEST["id"];
 ?>
 
 
@@ -22,10 +23,11 @@ $company_id = $_POST["id"];
         <a href="admin_home.php">Home</a>
         <a href="admin_edu_partners.php">Educational partners</a>
         <a href="admin_profile.php">Users</a>
+        <a href="../php/login/logout.php">Log out</a>
     </nav>
 </header>
 <div>
-    <div class="customer_info">
+    <div class="company_info">
         <?php
 
         $stmt = $connection->prepare("SELECT * FROM companies WHERE id='$company_id'");
@@ -38,7 +40,7 @@ $company_id = $_POST["id"];
                 echo
 
 
-                    "<img class='contactIcon' src='../../images/write.png' alt='write.png' onclick='openUpdateForm()'>" .
+                    "<div class='updateCompany' onclick='openUpdateForm()'>Update the information</div><br>" .
                     $result["company_name"] . nl2br("\n") .
                     $result["company_location"] . nl2br("\n") .
                     $result["company_mail"];
@@ -50,15 +52,35 @@ $company_id = $_POST["id"];
         }
         ?>
     </div>
-</div>
-<div>
-    <?php
-    if (isset($_REQUEST["action"])) {
-        if ($_REQUEST["action"] == "update_company") {
-            include "admin_php/update_company.php";
-        }
-    }
-    ?>
-</div>
+<!--    <div class="form-popup" id="compUpdate">-->
+<!--        <form action="admin_php/update_company.php?id=--><?php //echo $result["id"]; ?><!--"-->
+<!--              class="form-container" method="post">-->
+<!--            <h1>Update klant</h1>-->
+<!---->
+<!--            <label for="updateCustName"><b>Name</b></label>-->
+<!--            <input type="text" placeholder="Fill in the new name." name="updateCompName"-->
+<!--                   value="--><?php //echo $updatedName; ?><!--" required>-->
+<!---->
+<!--            <label for="updateCustAddress"><b>Address</b></label>-->
+<!--            <input type="text" placeholder="Fill in the new location." name="updateCompLocation"-->
+<!--                   value="--><?php //echo $updatedLocation; ?><!--" required>-->
+<!---->
+<!--            <label for="updateCustNumber"><b>E-mail</b></label>-->
+<!--            <input type="text" placeholder="Fill in the new mail address." name="updateCompMail"-->
+<!--                   value="--><?php //echo $updatedMail; ?><!--" required>-->
+<!--            <button type="submit" class="btn">Update</button>-->
+<!--            <button type="submit" class="btn cancel" onclick="closeUpdateForm()">Cancel</button>-->
+<!--        </form>-->
+<!--</div>-->
+<!---->
+<!--    <script>-->
+<!--        function openUpdateForm() {-->
+<!--            document.getElementById("compUpdate").style.display = "block";-->
+<!--        }-->
+<!---->
+<!--        function closeUpdateForm() {-->
+<!--            document.getElementById("compUpdate").style.display = "none";-->
+<!--        }-->
+<!--    </script>-->
 </body>
 </html>

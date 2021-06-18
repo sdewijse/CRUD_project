@@ -44,5 +44,9 @@ $partner_id = $_REQUEST["id"];
         ?>
     </div>
 </div>
+<div class="dummyDiv">
+    In this area of the page one could load detailed maps, contact information of individuals or detailed info of which students
+    belong in to this institute.
+</div>
 </body>
 </html>

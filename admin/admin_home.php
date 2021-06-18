@@ -20,6 +20,7 @@ include_once("../includes/connect.php");?>
         <a href="admin_home.php">Home</a>
         <a href="admin_edu_partners.php">Educational partners</a>
         <a href="admin_profile.php">Users</a>
+        <a href="../php/login/logout.php">Log out</a>
     </nav>
 </header>
 
@@ -56,7 +57,7 @@ include_once("../includes/connect.php");?>
 </script>
 
 <div id="Companies" class="tabcontent">
-    <table class="myTable">
+    <table class="tableSearch">
         <tr>
             <td class="searchBar"><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Look a company up."></td>
         </tr>
@@ -77,8 +78,8 @@ include_once("../includes/connect.php");?>
                     echo '
                 
                 <tr>
-                    <td><a class="page_link" href=pages/company.php?id=' . $result_company["id"] . '>' . $result_company["company_name"] . '</a></td>
-                    <td><a class="page_link" href=pages/company.php?id=' . $result_company["id"] . '>' . $result_company["company_mail"] . '</a></td>
+                    <td><a class="page_link" href=admin_companies.php?id=' . $result_company["id"] . '>' . $result_company["company_name"] . '</a></td>
+                    <td><a class="page_link" href=admin_companies.php?id=' . $result_company["id"] . '>' . $result_company["company_mail"] . '</a></td>
                 </tr>';
                 }
             }

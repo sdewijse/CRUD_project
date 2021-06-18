@@ -35,3 +35,48 @@ td, th{
 .page_link{
     color: black;
 }
+
+.tableSearch{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.add_company{
+    background-color: #00b0f0;
+    width: 95px;
+    height: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+/* CSS for detailpage companies */
+
+.updateCompany{
+    background-color: #0070c0;
+    width: 150px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.company_info{
+    float: left;
+    width: 300px;
+    height: 100px;
+    padding: 15px;
+    margin-top: 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    background-color: #00b0f0;
+    box-shadow: 10px 10px 5px grey;
+}
+
+/* CSS for detailpage educational partners */
+
+.partner_info{
+    float: left;
+    width: 300px;
+    height: 100px;
+    padding: 15px;
+    background-color: #00b0f0;
+    box-shadow: 10px 10px 5px grey;
+}

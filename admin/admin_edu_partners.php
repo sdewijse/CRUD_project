@@ -41,8 +41,8 @@
                     echo '
                 
                 <tr>
-                    <td><a href=admin_partner_detail.php?id=' . $result_edu["id"] . '>' . $result_edu["name"] . '</a></td>
-                    <td><a href=admin_partner_detail.php?id=' . $result_edu["id"] . '>' . $result_edu["branch"] . '</a></td>
+                    <td><a class="page_link" href=admin_partner_detail.php?id=' . $result_edu["id"] . '>' . $result_edu["name"] . '</a></td>
+                    <td><a class="page_link" href=admin_partner_detail.php?id=' . $result_edu["id"] . '>' . $result_edu["branch"] . '</a></td>
                 </tr>';
                 }
             }
