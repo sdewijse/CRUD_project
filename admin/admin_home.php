@@ -56,14 +56,14 @@ include_once("../includes/connect.php");?>
 </script>
 
 <div id="Companies" class="tabcontent">
-    <table class="companyTable">
+    <table class="myTable">
         <tr>
             <td class="searchBar"><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Look a company up."></td>
         </tr>
     </table>
 
     <div id="Companies" class="tabcontent">
-        <table id="myTable">
+        <table id="companyTable">
             <tr class="header">
                 <th style="width:40%;">Name</th>
                 <th style="width:25%;">E-mail</th>
@@ -77,8 +77,8 @@ include_once("../includes/connect.php");?>
                     echo '
                 
                 <tr>
-                    <td><a href=pages/company.php?id=' . $result_company["id"] . '>' . $result_company["company_name"] . '</a></td>
-                    <td><a href=pages/company.php?id=' . $result_company["id"] . '>' . $result_company["company_mail"] . '</a></td>
+                    <td><a class="page_link" href=pages/company.php?id=' . $result_company["id"] . '>' . $result_company["company_name"] . '</a></td>
+                    <td><a class="page_link" href=pages/company.php?id=' . $result_company["id"] . '>' . $result_company["company_mail"] . '</a></td>
                 </tr>';
                 }
             }
