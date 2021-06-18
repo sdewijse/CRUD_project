@@ -17,6 +17,7 @@
         <a href="../home.php">Home</a>
         <a href="educational_partners.php">Educational partners</a>
         <a href="profile.php">Profile</a>
+        <a href="../php/login/logout.php">Log out</a>
     </nav>
 </header>
 <div id="Companies">

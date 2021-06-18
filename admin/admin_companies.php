@@ -14,6 +14,7 @@ include_once("../includes/session.php");
 include_once("../includes/connect.php");
 
 $company_id = $_REQUEST["id"];
+$GLOBALS['companyID'] = $company_id;
 ?>
 
 
@@ -53,6 +54,10 @@ $company_id = $_REQUEST["id"];
         }
         ?>
     </div>
+    <div class="dummyDiv">
+        In this area of the page one could load detailed maps, contact information of individuals or detailed info of which students
+        belong in to this institute.
+    </div>
 <!--    <div class="form-popup" id="compUpdate">-->
 <!--        <form action="admin_php/update_company.php?id=--><?php //echo $result["id"]; ?><!--"-->
 <!--              class="form-container" method="post">-->
@@ -84,23 +89,26 @@ $company_id = $_REQUEST["id"];
 <!--        }-->
 <!--    </script>-->
 
-<!--    <div class="form-popup" id="deleteForm">-->
-<!--        <form action="admin_php/delete_company.php" class="form-container" method="post">-->
-<!--            <h1>Deleting a company</h1><br>-->
-<!---->
-<!--            <button type="submit" class="btn">Delete. (Warning: this can't be undone.)</button>-->
-<!--            <button type="submit" class="btn cancel" onclick="closeDeleteForm()">Cancel</button>-->
-<!--        </form>-->
-<!--    </div>-->
-<!---->
-<!--    <script>-->
-<!--        function openDeleteForm() {-->
-<!--        document.getElementById("deleteForm").style.display = "block";-->
-<!--        }-->
-<!---->
-<!--        function closeDeleteForm() {-->
-<!--        document.getElementById("deleteForm").style.display = "none";-->
-<!--        }-->
-<!--    </script>-->
+    <div class="form-popup" id="deleteForm">
+        <form action="admin_php/delete_company.php" class="form-container" method="post">
+            <h1>Deleting a company</h1><br>
+
+            <label for="idVerification"><b>Veryfi the company id</b></label>
+            <input type="text" placeholder="Fill in the id of this company." name="idToDelete" required>
+
+            <button type="submit" class="btn">Delete. (Warning: this can't be undone.)</button>
+            <button type="submit" class="btn cancel" onclick="closeDeleteForm()">Cancel</button>
+        </form>
+    </div>
+
+    <script>
+        function openDeleteForm() {
+        document.getElementById("deleteForm").style.display = "block";
+        }
+
+        function closeDeleteForm() {
+        document.getElementById("deleteForm").style.display = "none";
+        }
+    </script>
 </body>
 </html>

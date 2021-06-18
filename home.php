@@ -45,6 +45,7 @@ switch ($message) {
             <a href="home.php">Home</a>
             <a href="pages/educational_partners.php">Educational partners</a>
             <a href="pages/profile.php">Profile</a>
+            <a href="php/login/logout.php">Log out</a>
         </nav>
     </header>
     <main>

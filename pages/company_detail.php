@@ -22,10 +22,11 @@
         <a href="../home.php">Home</a>
         <a href="educational_partners.php">Educational partners</a>
         <a href="profile.php">Profile</a>
+        <a href="../php/login/logout.php">Log out</a>
     </nav>
 </header>
     <div>
-        <div class="customer_info">
+        <div class="company_info">
             <?php
 
             $stmt = $connection->prepare("SELECT * FROM companies WHERE id='$company_id'");
@@ -43,6 +44,10 @@
             }
             ?>
         </div>
+    </div>
+    <div class="dummyDiv">
+        In this area of the page one could load detailed maps, contact information of individuals or detailed info of which students
+        belong in to this institute.
     </div>
 </body>
 </html>
