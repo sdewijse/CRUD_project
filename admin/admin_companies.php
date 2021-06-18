@@ -58,36 +58,36 @@ $GLOBALS['companyID'] = $company_id;
         In this area of the page one could load detailed maps, contact information of individuals or detailed info of which students
         belong in to this institute.
     </div>
-<!--    <div class="form-popup" id="compUpdate">-->
-<!--        <form action="admin_php/update_company.php?id=--><?php //echo $result["id"]; ?><!--"-->
-<!--              class="form-container" method="post">-->
-<!--            <h1>Update klant</h1>-->
-<!---->
-<!--            <label for="updateCustName"><b>Name</b></label>-->
-<!--            <input type="text" placeholder="Fill in the new name." name="updateCompName"-->
-<!--                   value="--><?php //echo $updatedName; ?><!--" required>-->
-<!---->
-<!--            <label for="updateCustAddress"><b>Address</b></label>-->
-<!--            <input type="text" placeholder="Fill in the new location." name="updateCompLocation"-->
-<!--                   value="--><?php //echo $updatedLocation; ?><!--" required>-->
-<!---->
-<!--            <label for="updateCustNumber"><b>E-mail</b></label>-->
-<!--            <input type="text" placeholder="Fill in the new mail address." name="updateCompMail"-->
-<!--                   value="--><?php //echo $updatedMail; ?><!--" required>-->
-<!--            <button type="submit" class="btn">Update</button>-->
-<!--            <button type="submit" class="btn cancel" onclick="closeUpdateForm()">Cancel</button>-->
-<!--        </form>-->
-<!--</div>-->
-<!---->
-<!--    <script>-->
-<!--        function openUpdateForm() {-->
-<!--            document.getElementById("compUpdate").style.display = "block";-->
-<!--        }-->
-<!---->
-<!--        function closeUpdateForm() {-->
-<!--            document.getElementById("compUpdate").style.display = "none";-->
-<!--        }-->
-<!--    </script>-->
+    <div class="form-popup" id="compUpdate">
+        <form action="admin_php/update_company.php?id=<?php echo $company_id; ?>"
+              class="form-container" method="post">
+            <h1>Update klant</h1>
+
+            <label for="updateCustName"><b>Name</b></label>
+            <input type="text" placeholder="Fill in the new name." name="updateCompName"
+                   value="<?php echo $updatedName; ?>" required>
+
+            <label for="updateCustAddress"><b>Address</b></label>
+            <input type="text" placeholder="Fill in the new location." name="updateCompLocation"
+                   value="<?php echo $updatedLocation; ?>" required>
+
+            <label for="updateCustNumber"><b>E-mail</b></label>
+            <input type="text" placeholder="Fill in the new mail address." name="updateCompMail"
+                   value="<?php echo $updatedMail; ?>" required>
+            <button type="submit" class="btn">Update</button>
+            <button type="submit" class="btn cancel" onclick="closeUpdateForm()">Cancel</button>
+        </form>
+</div>
+
+    <script>
+        function openUpdateForm() {
+            document.getElementById("compUpdate").style.display = "block";
+        }
+
+        function closeUpdateForm() {
+            document.getElementById("compUpdate").style.display = "none";
+        }
+    </script>
 
     <div class="form-popup" id="deleteForm">
         <form action="admin_php/delete_company.php" class="form-container" method="post">
