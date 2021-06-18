@@ -1,33 +1,3 @@
-<?php
-if (isset($_GET["message"])) {
-    $message = $_GET["message"];
-} else{
-    $message = 0;
-}
-
-switch ($message) {
-    case 1:
-        $bericht = "Please fill in your username and/or password.";
-        $class = "error_message";
-        break;
-    case 2:
-        $bericht = "You are not a member yet, please register first.";
-        $class = "errormessage";
-        break;
-    case 3:
-        $bericht = "You have logged in succesfully.";
-        $class = "success_message";
-        break;
-
-    default:
-        $bericht = "";
-        $class   = "";
-        break;
-}
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -37,7 +7,12 @@ switch ($message) {
     <link rel="stylesheet" href="css/layout.css">
 </head>
 
-<?php include_once("includes/connect.php");?>
+<?php
+
+include_once("includes/session.php");
+include_once("includes/connect.php");
+
+?>
 
 <body>
     <header>
