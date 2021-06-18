@@ -71,5 +71,7 @@
                 }
             }
         </script>
+    </div>
+
 </body>
 <?php

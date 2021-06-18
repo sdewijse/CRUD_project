@@ -36,8 +36,8 @@ $partner_id = $_REQUEST["id"];
                 ?>
                 <?php
                 echo
-                    $result["branch"] . nl2br("\n") .
-                    $result["name"] . nl2br("\n") .
+                    $result["branch"] . nl2br("\n") . nl2br("\n") .
+                    $result["name"] . nl2br("\n") . nl2br("\n") .
                     $result["description"];
             }
         }

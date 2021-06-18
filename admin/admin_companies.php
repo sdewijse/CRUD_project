@@ -41,9 +41,10 @@ $company_id = $_REQUEST["id"];
 
 
                     "<div class='updateCompany' onclick='openUpdateForm()'>Update the information</div><br>" .
-                    $result["company_name"] . nl2br("\n") .
-                    $result["company_location"] . nl2br("\n") .
-                    $result["company_mail"];
+                    $result["company_name"] . nl2br("\n") . nl2br("\n") .
+                    $result["company_location"] . nl2br("\n") . nl2br("\n") .
+                    $result["company_mail"] . nl2br("\n") . nl2br("\n") . nl2br("\n") .
+                    "<div class='deleteCompany' onclick='openDeleteForm()'>Delete...?</div>";
 
                 $updatedName = $result["company_name"];
                 $updatedLocation = $result["company_location"];
@@ -80,6 +81,25 @@ $company_id = $_REQUEST["id"];
 <!---->
 <!--        function closeUpdateForm() {-->
 <!--            document.getElementById("compUpdate").style.display = "none";-->
+<!--        }-->
+<!--    </script>-->
+
+<!--    <div class="form-popup" id="deleteForm">-->
+<!--        <form action="admin_php/delete_company.php" class="form-container" method="post">-->
+<!--            <h1>Deleting a company</h1><br>-->
+<!---->
+<!--            <button type="submit" class="btn">Delete. (Warning: this can't be undone.)</button>-->
+<!--            <button type="submit" class="btn cancel" onclick="closeDeleteForm()">Cancel</button>-->
+<!--        </form>-->
+<!--    </div>-->
+<!---->
+<!--    <script>-->
+<!--        function openDeleteForm() {-->
+<!--        document.getElementById("deleteForm").style.display = "block";-->
+<!--        }-->
+<!---->
+<!--        function closeDeleteForm() {-->
+<!--        document.getElementById("deleteForm").style.display = "none";-->
 <!--        }-->
 <!--    </script>-->
 </body>
